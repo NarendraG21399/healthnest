@@ -19,14 +19,17 @@ const AddPost = () => {
                             &nbsp;
                              post</a>
                     </li>
+                 
                     <li className="nav-item">
-                        <a className="nav-link" ><i class="fa fa-question-circle" aria-hidden="true"></i>Ask questions</a>
+                        <a className="nav-link" ><i class="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
                     </li>
+                    
                     <li className="nav-item">
-                        <a className="nav-link" >poll</a>
+                        <a className="nav-link" ><i  class="fa fa-bars"></i> &nbsp; poll</a>
                     </li>
+                  
                     <li className="nav-item">
-                        <a className="nav-link" >Events</a>
+                        <a className="nav-link" ><i class="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
                     </li>
                 </ul>
             </div>

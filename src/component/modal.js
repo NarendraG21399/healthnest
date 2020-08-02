@@ -21,16 +21,41 @@ const Modal = (props) => {
         <div className="modal-backdrop bd-example-modal-lg"  id="exampleModalScrollable" style={ { display: 'block', opacity: 0.95 , overflow: 'auto'}} id="channelModal">
             <div className="modal-dialog modal-dialog-scrollable modal-lg" role="document">
                 <div className="modal-content">
-                    <div className="modal-header">
+                    
+                        <div className="modal-header">
+                <ul className="nav nav-pills card-header-pills text-success"  >
+                    <li className="nav-item">
+                        <a className="nav-link"  >
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            &nbsp;
+                             post</a>
+                    </li>
+                 
+                    <li className="nav-item">
+                        <a className="nav-link" ><i class="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
+                    </li>
+                    
+                    <li className="nav-item">
+                        <a className="nav-link" ><i  class="fa fa-bars"></i> &nbsp; poll</a>
+                    </li>
+                  
+                    <li className="nav-item">
+                        <a className="nav-link" ><i class="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
+                    </li>
+                </ul>
+           
+          
                         <button
                             onClick={props.closemodal}
                             type="button"
                             className="close"
                             data-dismiss="modal"
                             aria-label="Close"
+                            
                         >
                             <span aria-hidden="true">&times;</span>
                         </button>
+                  
                     </div>
                     <div className="modal-body">
                         <div className="row">

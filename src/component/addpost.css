@@ -1,3 +1,5 @@
-.nav-pills li{
+.nav-pills li {
     cursor: pointer;
+     border-right: 1px solid lightgray;
 }
+    
