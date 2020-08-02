@@ -3,7 +3,7 @@ import avatar from '../asset/icon-avatar.png';
 
 const Navbar = () => {
     return (<div style={{ height: '60vh', width: '25%' , margin: '20px 50px'  }}>
-        <div className="media shadow-sm" style={{ backgroundColor: "white", padding: '  15px' }}  >
+        <div className="media shadow" style={{ backgroundColor: "white", padding: '  15px' }}  >
             <img className="align-self-start mr-3" src={avatar} style={{
                 verticalAlign: 'middle',
                 width: '60px',
@@ -13,7 +13,7 @@ const Navbar = () => {
             }} alt="Generic placeholder image" />
             <div className="media-body">
                 <h5 className="mt-0">Patient</h5>
-                <p style={{ color: 'darkgreen' }}>DIAGNOSED RECENTLY</p>
+                <p  className="text-success">DIAGNOSED RECENTLY</p>
             </div>
         </div>
         <hr />

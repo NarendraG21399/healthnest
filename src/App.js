@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './component/header'
 import Navbar from "./component/navbar";
 import AddPost from "./component/addpost";
+import Tagbutton from "./component/tagbutton";
 import Feed from "./component/feed";
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       <Header />
       <Navbar />
       <AddPost />
+      <Tagbutton/>
       <Feed />
+      
     </div>
   );
 }

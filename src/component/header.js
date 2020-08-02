@@ -1,7 +1,7 @@
 import React from 'react';
 import avatar from '../asset/icon-avatar.png';
 const Header = () => {
-  return (<nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'lightgreen' }}>
+  return (<nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#28a745' }}>
     <a className="navbar-brand" href="#"><i className="fa fa-comment-alt-plus"></i>Feed</a>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
