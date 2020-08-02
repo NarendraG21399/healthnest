@@ -2,7 +2,6 @@ import React from 'react';
 
 const Tagbutton = () => {
     return (
-
         <div className="container">
             <ul className="nav nav-pills d-flex justify-content-around ">
                 <li className="nav-item">

@@ -49,7 +49,7 @@ const Modal = (props) => {
                     <Tagbutton />
 
                     <div className="modal-footer">
-                        <button onClick={post} type="button" className="btn btn-lg">
+                        <button onClick={post} type="button" className="btn btn-success btn-lg" style={{width: '200px'}}>
                             POST
                         </button>
                     </div>

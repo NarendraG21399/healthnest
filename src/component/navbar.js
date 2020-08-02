@@ -20,10 +20,12 @@ const Navbar = () => {
         <div style={{ marginTop: '10px' }}>
             <p>Library</p>
             <ul style={{ listStyle: 'none', marginTop: '10px' }}>
-                <li style={{ marginBottom: '20px', }}>My Bookmarks</li>
-                <li style={{ marginBottom: '20px' }}>News & Article</li>
-                <li style={{ marginBottom: '20px' }}>FAQs</li>
-                <li  >Events</li>
+                <li style={{ marginBottom: '20px', }}>
+                    <i class="fa fa-bookmark text-warning" aria-hidden="true"></i>  
+                    &nbsp;  My Bookmarks</li>
+                <li style={{ marginBottom: '20px' }}><i  class="fa fa-newspaper-o text-info"  aria-hidden="true"></i>  News & Article</li>
+                <li style={{ marginBottom: '20px' }}><i class="fa fa-comments text-success" aria-hidden="true"></i>  FAQs</li>
+                <li  ><i class="fa fa-calendar text-danger" aria-hidden="true"></i>  Events</li>
             </ul>
         </div>
     </div>);

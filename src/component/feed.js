@@ -26,7 +26,7 @@ const FEED = () => {
                         </div>
                         <div className="card-body">
                             <img src={flower} style={{ width: '90%', margin: 'auto' }} />
-                            <h5 className="text-success">Ratnagiri maharastra</h5>
+                            <h5 className="text-success">  <i class="fa fa-map-marker"></i>&nbsp;Ratnagiri maharastra</h5>
                             <hr />
                             <p className="card-text">https://getbootstrap.com › docs › components › dropdowns
                                 Dropdowns are built on a third party library, Popper.js, which provides ... Wrap the dropdown's toggle (your button or link) and the dropdown menu within ...
