@@ -12,24 +12,24 @@ const AddPost = () => {
     return (
         <div className="card ">
             <div className="card-header">
-                <ul className="nav nav-pills card-header-pills text-success"  >
+                <ul className="nav nav-pills card-header-pills text-success addpost"  >
                     <li className="nav-item">
                         <a className="nav-link"  onClick= {() => {setismodelshow(true) }}>
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            <i className="fa fa-pencil" aria-hidden="true"></i>
                             &nbsp;
                              post</a>
                     </li>
                  
                     <li className="nav-item">
-                        <a className="nav-link" ><i class="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
+                        <a className="nav-link" ><i className="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
                     </li>
                     
                     <li className="nav-item">
-                        <a className="nav-link" ><i  class="fa fa-bars"></i> &nbsp; poll</a>
+                        <a className="nav-link" ><i  className="fa fa-bars"></i> &nbsp; poll</a>
                     </li>
                   
                     <li className="nav-item">
-                        <a className="nav-link" ><i class="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
+                        <a className="nav-link" ><i className="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
                     </li>
                 </ul>
             </div>
@@ -38,8 +38,8 @@ const AddPost = () => {
                     <h5  className="col-sm-9">What's on your mind? </h5>
                     <div className="col-sm-2 d-flex justify-content-end align-items-end justify-content-around
 ">
-                    <i class="fa fa-map-marker"></i>
-                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <i className="fa fa-map-marker"></i>
+                    <i className="fa fa-picture-o" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
