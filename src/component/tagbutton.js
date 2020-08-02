@@ -2,8 +2,8 @@ import React from 'react';
 
 const Tagbutton = () => {
     return (    
-        <div className="container">
-            <ul className="nav  d-flex  nav-pills justify-content-around ">
+        <div className="container w-75" style={{margin: '20px'}}>
+            <ul className="nav  d-flex  nav-pills justify-content-between">
                 <li className="nav-item">
                     <a className="nav-link" data-toggle="pill" href="#home">All Post</a>
                 </li>

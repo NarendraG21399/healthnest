@@ -49,18 +49,18 @@ const Modal = (props) => {
                             aria-label="Close"
 
                         >
-                         <span aria-hidden="true">&times;</span>
+                            <span aria-hidden="true">&times;</span>
                         </button>
 
                     </div>
                     <div className="modal-body">
                         <div className="row">
                             <div className="col-12 form-group">
-                                <label   className="col-form-label">Description:</label>
+                                <label className="col-form-label">Description:</label>
                                 <textarea className="form-control" id="message-text" style={{ outline: 'none' }}></textarea>
                             </div>
                         </div>
-                        <label    className="col-form-label">Description:</label>
+                        <label className="col-form-label">Description:</label>
                         <input type="file" accept="image/*" onChange={onImageChange} />
 
                     </div>

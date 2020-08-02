@@ -10,7 +10,7 @@ const AddPost = () => {
         setismodelshow(false)
     };
     return (
-        <div className="card ">
+        <div className="card  w-50">
             <div className="card-header">
                 <ul className="nav nav-pills card-header-pills text-success addpost"  >
                     <li className="nav-item">

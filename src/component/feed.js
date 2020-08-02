@@ -6,7 +6,7 @@ import "./feed.style.css";
 
 const FEED = () => {
     return (
-        <div className="container">
+        <div className="container w-50">
             <div className="row">
                 <div className="col">
                     <div className="card">

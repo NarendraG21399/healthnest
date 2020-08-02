@@ -6,13 +6,13 @@ import Tagbutton from "./component/tagbutton";
 import Feed from "./component/feed";
 function App() {
   return (
-    <div >
+    <div  >
       <Header />
       <Navbar />
       <AddPost />
       <Tagbutton/>
       <Feed />
-      
+     
     </div>
   );
 }
