@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import Tagbutton from "./tagbutton";
 const Modal = (props) => {
-    const [image, setimage] = useState('');
+    const [data, setdata] = useState({});
+   
     const onImageChange = event => {
         if (event.target.files && event.target.files[0]) {
             let reader = new FileReader();
             reader.onload = (e) => {
-                setimage(e.target.result);
+                setdata((prev) => { return { ...prev , image: e.target.result}});
+
             };
             reader.readAsDataURL(event.target.files[0]);
         }
 
     }
 
+    const onchange =(e) =>{ 
+        console.log(e.target.value)
+       setdata((prev)=> { return {...prev, description: e.target.value}})
+    }
     const post = () => {
-
+         const feedlist  = JSON.parse(localStorage.getItem('feedlist'));
+         const storage = feedlist ? [data , ...feedlist]: [data];
+         console.log(storage);
+         localStorage.setItem('feedlist', JSON.stringify(storage));
+        
     }
     return (
         <div className="modal-backdrop bd-example-modal-lg" id="exampleModalScrollable" style={{ display: 'block', opacity: 0.95, overflow: 'auto' }} id="channelModal">
@@ -57,14 +67,14 @@ const Modal = (props) => {
                         <div className="row">
                             <div className="col-12 form-group">
                                 <label className="col-form-label">Description:</label>
-                                <textarea className="form-control" id="message-text" style={{ outline: 'none' }}></textarea>
+                                <textarea className="form-control" id="message-text"   value={data.description} onChange={onchange}  ></textarea>
                             </div>
                         </div>
                         <label className="col-form-label">Description:</label>
                         <input type="file" accept="image/*" onChange={onImageChange} />
 
                     </div>
-                    {image ? <img id="target" src={image} style={{ width: '40%', height: '200px', margin: 'auto' }} /> : null}
+                    {data.image ? <img   src={data.image} style={{ width: '40%', height: '200px', margin: 'auto' }} /> : null}
 
                     <h4 className='text-success mx-auto '>Add topics that best describe your post</h4>
                     <Tagbutton />
