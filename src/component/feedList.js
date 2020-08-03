@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import avatar from '../asset/icon-avatar.png';
 import "./feed.style.css";
 
@@ -13,15 +13,16 @@ const Feedlist = (props) => {
                         height: '60px',
                         bordeRadius: '50%',
                         marginLeft: '10px'
-                    }} alt="missing image"/>
+                    }} alt="missing image" />
                     <div className="media-body">
                         <h5 className="mt-0">{props.data.name}</h5>
                         <p className="text-success" >DIAGNOSED RECENTLY</p>
                     </div>
-                    <div className="test" onClick={()=>props.deleteList(props.data.id)}></div>
+                     
+                    <div className="test" onClick={() => props.deleteList(props.data.id)}></div>
                 </div>
                 <div className="card-body">
-                    <img src={props.data.image} style={{ width: '90%', margin: 'auto' }} />
+                    <img src={props.data.image} style={{ width: '90%', margin: 'auto' }} alt="feed image"/>
                     <h5 className="text-success">  <i className="fa fa-map-marker"></i>&nbsp;Ratnagiri maharastra</h5>
                     <hr />
                     <p className="card-text">{props.data.description}

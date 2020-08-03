@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
 import './addpost.css'
 import Modal from "./modal";
-
+import { list } from "./util";
 const AddPost = () => {
     const [ismodelshow, setismodelshow] = useState(false);
     const closemodal = () => {
         setismodelshow(false)
     };
-    
+    const navlist = list.map((ele) => 
+    <li className="nav-item" key={ele.name}>
+        <p className="nav-link" ><i className={ele.icon} aria-hidden="true"></i>   &nbsp; {ele.name}</p>
+    </li>)
     return (
         <div className="card  w-50">
             <div className="card-header">
                 <ul className="nav nav-pills card-header-pills text-success addpost"  >
                     <li className="nav-item">
-                        <a className="nav-link" onClick={() => { setismodelshow(true) }}>
+                        <p className="nav-link" onClick={() => { setismodelshow(true) }}>
                             <i className="fa fa-pencil" aria-hidden="true"></i>
                             &nbsp;
-                             post</a>
+                             post</p>
                     </li>
-                    <li className="nav-item">
-                        <a className="nav-link" ><i className="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" ><i className="fa fa-bars"></i> &nbsp; poll</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" ><i className="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
-                    </li>
+                     {navlist}
                 </ul>
             </div>
             <div className="card-body">
