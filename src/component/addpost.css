@@ -5,5 +5,8 @@
 .card{
     padding: 15px ;
     margin: auto;
-    
+   
+}
+.justify-content-end {
+    margin-left: auto;
 }

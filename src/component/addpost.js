@@ -3,31 +3,27 @@ import './addpost.css'
 import Modal from "./modal";
 
 const AddPost = () => {
-
     const [ismodelshow, setismodelshow] = useState(false);
-
     const closemodal = () => {
         setismodelshow(false)
     };
+    
     return (
         <div className="card  w-50">
             <div className="card-header">
                 <ul className="nav nav-pills card-header-pills text-success addpost"  >
-                    <li className="nav-item">   
+                    <li className="nav-item">
                         <a className="nav-link" onClick={() => { setismodelshow(true) }}>
                             <i className="fa fa-pencil" aria-hidden="true"></i>
                             &nbsp;
                              post</a>
                     </li>
-
                     <li className="nav-item">
                         <a className="nav-link" ><i className="fa fa-question-circle" aria-hidden="true"></i>   &nbsp;Ask questions</a>
                     </li>
-
                     <li className="nav-item">
                         <a className="nav-link" ><i className="fa fa-bars"></i> &nbsp; poll</a>
                     </li>
-
                     <li className="nav-item">
                         <a className="nav-link" ><i className="fa fa-calendar" aria-hidden="true"> </i> &nbsp; Events</a>
                     </li>

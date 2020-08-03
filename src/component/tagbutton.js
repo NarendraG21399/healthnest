@@ -1,30 +1,18 @@
 import React from 'react';
 
-const Tagbutton = () => {
+const Tagbutton = ({tagfilter,allpost}) => {
+    const navlist = ['news', 'diet', 'lifestyle', 'Sysmptoms','Treatment','Test topic'].map((ele, index) => 
+        <li className="nav-item" key={index}>
+            <a className="tag nav-link" data-toggle="pill" href="#menu1"  onClick={()=> tagfilter(ele)}> {ele}</a>
+        </li>
+    );
     return (    
-        <div className="container w-75" style={{margin: '20px'}}>
+        <div className="container w-50" style={{margin: 'auto'  , marginTop: '10px', marginBottom: '10px' }}>
             <ul className="nav  d-flex  nav-pills justify-content-between">
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#home">All Post</a>
-                </li>
-                <li className="nav-item ">
-                    <a className="nav-link" data-toggle="pill" href="#menu1"> News</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#menu2">Diet</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#menu2">lifestyle</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#menu2">Sysmptoms</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#menu2">Treatment</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" data-toggle="pill" href="#menu2">Test topic</a>
-                </li>
+                {allpost ? <li className="nav-item">
+                    <a className="tag nav-link active" data-toggle="pill" href="#home" onClick={()=> allpost()}>All Post</a>
+                </li>: null}
+                {navlist}
             </ul>
         </div>
     )

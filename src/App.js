@@ -2,17 +2,18 @@ import React from 'react';
 import Header from './component/header'
 import Navbar from "./component/navbar";
 import AddPost from "./component/addpost";
-import Tagbutton from "./component/tagbutton";
 import Feed from "./component/feed";
 function App() {
+  
   return (
     <div  >
       <Header />
       <Navbar />
+      <div style={{marginTop: '-395px', marginLeft: '100px'}}>
       <AddPost />
-      <Tagbutton/>
       <Feed />
-     
+     </div>
+
     </div>
   );
 }

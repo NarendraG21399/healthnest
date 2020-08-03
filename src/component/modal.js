@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Tagbutton from "./tagbutton";
-const Modal = (props) => {
-    const [data, setdata] = useState({});
-   
+import store from "../store";
+
+const Modal = ({closemodal}) => {
+    const [data, setdata] = useState({topics:[]});
+    useEffect(() => {
+        if(data.id){
+        store.dispatch({...data, type: 'ADD'})
+        closemodal();
+        }
+      }, [data.id]);
     const onImageChange = event => {
         if (event.target.files && event.target.files[0]) {
             let reader = new FileReader();
@@ -16,18 +23,19 @@ const Modal = (props) => {
     }
 
     const onchange =(e) =>{ 
-        console.log(e.target.value)
-       setdata((prev)=> { return {...prev, description: e.target.value}})
+        const value = e.target.value ;
+          setdata((prev)=> { return {...prev, description: value}});
     }
     const post = () => {
-         const feedlist  = JSON.parse(localStorage.getItem('feedlist'));
-         const storage = feedlist ? [data , ...feedlist]: [data];
-         console.log(storage);
-         localStorage.setItem('feedlist', JSON.stringify(storage));
-        
+         setdata((prev) => {return {...prev , date: new Date(), id: Date.now(), name: 'patient'}});
+    }
+    const addtopics =(topics) => {
+        const istopics = data.topics.includes(topics);
+        istopics ? setdata((prev)=> {return {...prev ,topics: data.topics.filter(ele => ele !== topics)  }}): 
+        setdata((prev)=> {return {...prev ,topics: [...prev.topics, topics]  }})
     }
     return (
-        <div className="modal-backdrop bd-example-modal-lg" id="exampleModalScrollable" style={{ display: 'block', opacity: 0.95, overflow: 'auto' }} id="channelModal">
+        <div className="modal-backdrop bd-example-modal-lg"   style={{ display: 'block', opacity: 0.95, overflow: 'auto' }}  >
             <div className="modal-dialog modal-dialog-scrollable modal-lg" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
@@ -52,7 +60,7 @@ const Modal = (props) => {
                             </li>
                         </ul>
                         <button
-                            onClick={props.closemodal}
+                            onClick={closemodal}
                             type="button"
                             className="close"
                             data-dismiss="modal"
@@ -67,17 +75,17 @@ const Modal = (props) => {
                         <div className="row">
                             <div className="col-12 form-group">
                                 <label className="col-form-label">Description:</label>
-                                <textarea className="form-control" id="message-text"   value={data.description} onChange={onchange}  ></textarea>
+                                <textarea className="form-control"    value={data.description} onChange={(e) => onchange(e)}  ></textarea>
                             </div>
                         </div>
-                        <label className="col-form-label">Description:</label>
+                        
                         <input type="file" accept="image/*" onChange={onImageChange} />
 
                     </div>
                     {data.image ? <img   src={data.image} style={{ width: '40%', height: '200px', margin: 'auto' }} /> : null}
 
                     <h4 className='text-success mx-auto '>Add topics that best describe your post</h4>
-                    <Tagbutton />
+                    <Tagbutton tagfilter={addtopics}/>
                     <div className="modal-footer">
                         <button onClick={post} type="button" className="btn btn-success btn-lg" style={{ width: '200px' }}>
                             POST
