@@ -71,9 +71,11 @@ const Modal = ({ closemodal }) => {
                                 <textarea className="form-control" value={data.description} onChange={(e) => onchange(e)}  ></textarea>
                             </div>
                         </div>
-
+                        <div className="row">
+                            <div className="col-12 form-group">
                         <input type="file" accept="image/*" onChange={onImageChange} />
-
+                        </div>
+                        </div>
                     </div>
                     {data.image ? <img src={data.image} style={{ width: '40%', height: '200px', margin: 'auto' }} /> : null}
 
