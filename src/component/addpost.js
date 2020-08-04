@@ -7,10 +7,10 @@ const AddPost = () => {
     const closemodal = () => {
         setismodelshow(false)
     };
-    const navlist = list.map((ele) => 
-    <li className="nav-item" key={ele.name}>
-        <p className="nav-link" ><i className={ele.icon} aria-hidden="true"></i>   &nbsp; {ele.name}</p>
-    </li>)
+    const navlist = list.map((ele) =>
+        <li className="nav-item" key={ele.name}>
+            <p className="nav-link" ><i className={ele.icon} aria-hidden="true"></i>   &nbsp; {ele.name}</p>
+        </li>)
     return (
         <div className="card  w-50">
             <div className="card-header">
@@ -21,7 +21,7 @@ const AddPost = () => {
                             &nbsp;
                              post</p>
                     </li>
-                     {navlist}
+                    {navlist}
                 </ul>
             </div>
             <div className="card-body">
