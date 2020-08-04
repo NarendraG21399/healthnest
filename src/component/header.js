@@ -9,10 +9,10 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto">
         <li className="nav-item active">
-        <p className="nav-link" ><i class="fa fa-globe" aria-hidden="true"></i> communities <span className="sr-only">(current)</span></p>
+        <p className="nav-link" ><i className="fa fa-globe" aria-hidden="true"></i> communities <span className="sr-only">(current)</span></p>
         </li>
       </ul>
-      <div style={{marginRight: '30%'}}><h5><i class="fa fa-medkit" aria-hidden="true"></i> HealthNest</h5></div>
+      <div style={{marginRight: '30%'}}><h5><i className="fa fa-medkit" aria-hidden="true"></i> HealthNest</h5></div>
       <div className="form-inline my-2 my-lg-0">
         <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
         <img src={avatar} alt="avatar" style={{

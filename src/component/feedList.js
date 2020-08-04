@@ -6,6 +6,7 @@ const Feedlist = (props) => {
     return (<div className="row">
         <div className="col">
             <div className="card">
+              <p>{props.data.topics.join('-')}</p>
                 <div className="media shadow" style={{ backgroundColor: "white", padding: '  15px' }}  >
                     <img className="align-self-start mr-3" src={avatar} style={{
                         verticalAlign: 'middle',
